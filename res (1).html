@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Restaurant</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <style>
+        /* General styles */
+body {
+    background-image: url("finger-food-and-drinks-on-dark-wood.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100vh;
+    margin: 0;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: rgb(103, 92, 184);
+}
+
+nav {
+    background-color: bisque;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
+    padding: 10px 0;
+}
+
+nav ul {
+    display: flex;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    margin: 0 20px;
+}
+
+nav a {
+    text-decoration: none;
+    color: rgb(103, 92, 184);
+    font-size: 19px;
+    transition: color 0.3s;
+}
+
+nav a:hover {
+    color: white;
+}
+
+.logo {
+    font-size: 33px;
+    font-weight: bold;
+}
+
+.menu {
+    cursor: pointer;
+    display: none;
+}
+
+.menu-line {
+    height: 3px;
+    width: 20px;
+    background-color: slateblue;
+    margin-bottom: 3px;
+}
+
+.feedback ul,
+.status ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    text-align: center;
+}
+
+.feedback li,
+.status li {
+    display: inline-block;
+    margin: 20px;
+}
+
+.feedback img,
+.ambianz img,
+.status img {
+    max-width: 20%;
+    height: auto;
+}
+
+.ambianz {
+    text-align: center;
+    margin: 150px auto 0;
+}
+
+.contact {
+    background-color: blueviolet;
+    color: black;
+    text-align: center;
+    padding: 20px 0;
+}
+
+@media screen and (max-width: 1024px) {
+    .feedback, .status, .ambianz {
+        margin: 20px auto;
+        text-align: center;
+    }
+
+    .feedback img, .ambianz img, .status img {
+        max-width: 80%;
+    }
+}
+
+@media screen and (max-width: 640px) {
+    nav {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .menu {
+        display: block;
+        position: absolute;
+        top: 20px;
+        right: 20px;
+    }
+
+    nav ul {
+        display: none;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav ul.showmenu {
+        display: flex;
+    }
+
+    nav ul li {
+        margin: 10px 0;
+    }
+
+    .logo {
+        margin: 10px 0 0 30px;
+    }
+
+    .feedback, .status, .ambianz {
+        margin: 70px auto;
+        text-align: center;
+    }
+
+    .feedback img, .ambianz img, .status img {
+        max-width: 100%;
+    }
+}
+
+    </style>
+    <nav>
+        <div class="logo"><a href="#">HOME</a></div>
+        <ul>
+            <li><a href="#">ORDERS</a></li>
+            <li><a href="#">FEEDBACKS</a></li>
+            <li><a href="#">OFFERS</a></li>
+            <li><a href="#">ACCOUNT</a></li>
+            <li><a href="#">STATUS</a></li>
+        </ul>
+        <div class="menu">
+            <div class="menu-line"></div>
+            <div class="menu-line"></div>
+            <div class="menu-line"></div>
+        </div>
+    </nav>
+
+    <div class="feedback">
+        <ul>
+            <li><a href="https://www.swiggy.com"><img src="feedback.jpg" alt="Feedback"></a></li>
+            <li><a href="https://www.swiggy.com"><img src="feedback.jpg" alt="Feedback"></a></li>
+        </ul>
+    </div>
+
+    <div class="ambianz">
+        <a href="https://www.swiggy.com">
+            <img src="feedback.jpg" alt="Ambianz">
+        </a>
+    </div>
+
+    <div class="status">
+        <ul>
+            <li><a href="https://www.swiggy.com"><img src="feedback.jpg" alt="Status"></a></li>
+            <li><a href="https://www.swiggy.com"><img src="feedback.jpg" alt="Status"></a></li>
+        </ul>
+    </div>
+
+    <footer class="contact">
+        <h1>Contacts</h1>
+        <h3>Mobile:</h3>
+        <h3>E-Mail:</h3>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
